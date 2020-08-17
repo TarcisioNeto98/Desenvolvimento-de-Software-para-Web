@@ -3,22 +3,24 @@
     <head>
         <title>Atividade 1</title>
         <meta charset="utf-8">
+        <link href="css/estilo.css" rel="stylesheet">
     </head>
     <body>
-        <form>
-            <input type="text" placeholder="Name"/><br>
-            <input type="email" placeholder="E-mail"/><br>
-            <input type="date" placeholder="Date of birth"/><br>
-            <labe>Services</labe><br/>
-            <input type="checkbox">Processing - 1 micro - $ 1,00 per hour</input>
-            <input type="checkbox">Processing - 1 medium - $ 2,00 per hour</input><br>
-            <input type="checkbox">Storage - 10 GB HD - $ 0,5 per hour</input>
-            <input type="checkbox">Storage - 1 TB HD - $ 1,00 per hour</input><br>
-            <input type="checkbox">Processing - 1 large - $ 10,00 per hour</input>
-            <input type="checkbox">Storage - 100 GB SSD - $ 5,00 per hour</input><br>
-
-            <input type="button" value="CLEAR"/>
-            <input type="button" value="ADD"/>
+        <form class="formulario" method="GET" action="https://www.google.com/webhp?hl=pt-BR&sa=X&ved=0ahUKEwj7tOil2qDrAhXVHrkGHT31DU4QPAgH">
+            <input name="nome" type="text" placeholder="Name"/>
+            <input name ="email" type="email" placeholder="E-mail"/><br>
+            <input name="data" type="date" placeholder="Date of birth"/><br><br><br>
+            <p>Services</p><br/>
+            <input name="p"type="checkbox">Processing - 1 micro - $ 1,00 per hour</input>
+            <input name="p"type="checkbox">Processing - 1 medium - $ 2,00 per hour</input><br>
+            <input name="p"type="checkbox">Storage - 10 GB HD - $ 0,5 per hour</input>
+            <input name="p"type="checkbox">Storage - 1 TB HD - $ 1,00 per hour</input><br>
+            <input name="p"type="checkbox">Processing - 1 large - $ 10,00 per hour</input>
+            <input name="p"type="checkbox">Storage - 100 GB SSD - $ 5,00 per hour</input><br>
+            <div>
+                <input id = "clear" type="button" value="CLEAR"/>
+                <input type="button" value="ADD"/>
+            </div>
         </form>
         <table>
             <tr>
