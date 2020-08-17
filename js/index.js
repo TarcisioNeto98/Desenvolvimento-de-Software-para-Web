@@ -1,10 +1,21 @@
+var limpar_inputs = (input, checkbox) => {
+    var i = 0;
+    alert("eai");
+    while(i < checkbox.length){
+        if(i < input.length) input[i].value = "";
+        checkbox[i].checked = false;
+        i++;
+    }
+};
+
+var inputs = document.querySelectorAll('input[type="text"], input[type="email"], input[type="date"]');
+var checkboxs = document.querySelectorAll('input[type="checkbox"]');
 var clear = document.getElementById('clear'), add = document.getElementById('add');
 var table = document.getElementById('table');
 
-add.addEventListener('click', () => {
-    var checkboxs = document.querySelectorAll('input[type="checkbox"]');
-    var i;
-    for(i = 0; i < checkboxs.length; i++){
-        alert(checkboxs[i].value == 'Processing - 1 micro - $ 1,00 per hour');
-    }
+clear.addEventListener('click', function(){
+    limpar_inputs(inputs, checkboxs);
 });
+
+/*add.addEventListener('click', () => {
+});*/
