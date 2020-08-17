@@ -11,18 +11,18 @@
             <input name ="email" type="email" placeholder="E-mail"/><br>
             <input name="data" type="date" placeholder="Date of birth"/><br><br><br>
             <p>Services</p><br/>
-            <input name="p"type="checkbox">Processing - 1 micro - $ 1,00 per hour</input>
-            <input name="p"type="checkbox">Processing - 1 medium - $ 2,00 per hour</input><br>
-            <input name="p"type="checkbox">Storage - 10 GB HD - $ 0,5 per hour</input>
-            <input name="p"type="checkbox">Storage - 1 TB HD - $ 1,00 per hour</input><br>
-            <input name="p"type="checkbox">Processing - 1 large - $ 10,00 per hour</input>
-            <input name="p"type="checkbox">Storage - 100 GB SSD - $ 5,00 per hour</input><br>
+            <input name="p" type="checkbox" value="Processing - 1 micro - $ 1,00 per hour">Processing - 1 micro - $ 1,00 per hour</input>
+            <input name="p" type="checkbox">Processing - 1 medium - $ 2,00 per hour</input><br>
+            <input name="p" type="checkbox">Storage - 10 GB HD - $ 0,5 per hour</input>
+            <input name="p" type="checkbox">Storage - 1 TB HD - $ 1,00 per hour</input><br>
+            <input name="p" type="checkbox">Processing - 1 large - $ 10,00 per hour</input>
+            <input name="p" type="checkbox">Storage - 100 GB SSD - $ 5,00 per hour</input><br>
             <div>
                 <input id = "clear" type="button" value="CLEAR"/>
-                <input type="button" value="ADD"/>
+                <input id = "add" type="button" value="ADD"/>
             </div>
         </form>
-        <table>
+        <table id = "table">
             <tr>
                 <th>Name</th>
                 <th>E-mail</th>
@@ -31,5 +31,6 @@
                 <th>Valor</th>
             </tr>
         </table>
+        <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>
