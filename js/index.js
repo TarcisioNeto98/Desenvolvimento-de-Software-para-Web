@@ -34,7 +34,7 @@ add.addEventListener('click', () => {
         }
         j++;
     }
-    valor.textContent = total+"";
+    valor.textContent = total+" per hour";
     insercao.appendChild(servicos);
     insercao.appendChild(valor);
 });
