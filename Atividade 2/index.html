@@ -49,7 +49,7 @@
                     <input v-on:click = 'add' type="button" class="btn btn-outline-primary btn-lg" value="ADD"/>
                 </div>
            </form>
-           <table class="table table-striped">
+           <table id="table-vue" class="table table-striped table-hover table-info mt-5">
                <thead>
                     <tr>
                         <th>Nome</th>
@@ -60,7 +60,7 @@
                     </tr>
                </thead>
                <tbody>
-                   <tr id = "tr-table" v-for="valor in valores">
+                   <tr v-for="valor in valores">
                        <td id = "item-vue" v-for="v in valor">{{ v }}</td>
                    </tr>
                </tbody>

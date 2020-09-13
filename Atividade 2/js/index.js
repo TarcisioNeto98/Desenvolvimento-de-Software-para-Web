@@ -42,12 +42,16 @@ var app = new Vue({
         },
         add: function(){
             this.cont++;
-            var item_tabela = [];
+            var item_tabela = [], total = 0, s = "";
             item_tabela.push(this.nome);
-            item_tabela.push(this.nome);
-            item_tabela.push(this.nome);
-            item_tabela.push(this.nome);
-            item_tabela.push(this.nome);
+            item_tabela.push(this.email);
+            item_tabela.push(this.nascimento);
+            for(i = 0; i < this.servicos.length; i++){
+                s += this.servicos[i].descricao;
+                total += this.servicos[i].status ? this.servicos[i].valor : 0;
+            }
+            item_tabela.push(s);
+            item_tabela.push(total);
             this.valores.push(item_tabela);
         }
     }
