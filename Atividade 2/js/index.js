@@ -41,18 +41,23 @@ var app = new Vue({
                 this.servicos[i].status = this.servicos[i].status ? false : false;
         },
         add: function(){
-            this.cont++;
-            var item_tabela = [], total = 0, s = "";
-            item_tabela.push(this.nome);
-            item_tabela.push(this.email);
-            item_tabela.push(this.nascimento);
-            for(i = 0; i < this.servicos.length; i++){
-                s += this.servicos[i].descricao;
-                total += this.servicos[i].status ? this.servicos[i].valor : 0;
+            var ano = this.nascimento.substr(0, 4);
+            var idade = 2020-parseInt(ano);
+            if(idade >= 18){
+                this.cont++;
+                var item_tabela = [], total = 0, s = "";
+                item_tabela.push(this.nome);
+                item_tabela.push(this.email);
+                item_tabela.push(this.nascimento);
+                for(i = 0; i < this.servicos.length; i++){
+                    s += this.servicos[i].descricao;
+                    total += this.servicos[i].status ? this.servicos[i].valor : 0;
+                }
+                item_tabela.push(s);
+                item_tabela.push("$"+total+" per hour");
+                this.valores.push(item_tabela);
             }
-            item_tabela.push(s);
-            item_tabela.push(total);
-            this.valores.push(item_tabela);
+            else alert("Individuo menor de 18 anos!");
         }
     }
 });
