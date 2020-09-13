@@ -16,9 +16,9 @@ Vue.component('tr-vue', {
 var app = new Vue({
     el:'#app',
     mounted: function(){
-        if(localStorage.getItem('quantidade')){
-            this.cont = parseInt(localStorage.getItem('quantidade'));
-            alert("quantidade de registros: " + localStorage.getItem('quantidade'));
+        if(localStorage.quantid){
+            this.cont = localStorage.quantid;
+            alert("quantidade de registros: " + localStorage.quantid);
         }
         else alert("quantidade de registros: 0");
     },
@@ -63,7 +63,7 @@ var app = new Vue({
                 item_tabela.push(s);
                 item_tabela.push("$"+total+" per hour");
                 this.valores.push(item_tabela);
-                localStorage.setItem('quantidade', this.cont+"");
+                localStorage.quantid = this.cont+"";
             }
             else alert("Individuo menor de 18 anos!");
         }
