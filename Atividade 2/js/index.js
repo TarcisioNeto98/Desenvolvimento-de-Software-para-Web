@@ -10,18 +10,22 @@ Vue.component('table-vue',{
 var app = new Vue({
     el:'#app',
     data:{
-        nome: '',
+        nome: 'tar',
         email: '',
         nascimento: '',
-        servicos: {
-            service1: {status: true, descricao:'Storage - 10 GB HD - $ 0,5 per hour'}
-        }
-    }/*,
+        servicos: [
+            {status: true, descricao:'Storage - 10 GB HD - $ 0,5 per hour'},
+            {status: true, descricao:'Storage - 10 GB HD - $ 0,5 per hour'}
+        ]
+    },
     methods:{
         clear: function(){
+            var i = 0;
             this.nome = '';
             this.email = '';
             this.nascimento = '';
+            for(i = 0; i < this.servicos.length; i++)
+                this.servicos[i].status = this.servicos[i].status ? false : false;
         }
-    }*/
+    }
 });
